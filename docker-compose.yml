@@ -1,0 +1,5 @@
+services:
+  devcontainer:
+    image: 1ukastesar/fit-flp-hs
+    volumes:
+      - .:/workspaces/hs-playground
