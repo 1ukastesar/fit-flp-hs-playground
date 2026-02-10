@@ -4,6 +4,8 @@
   "service": "devcontainer",
   "workspaceFolder": "/workspaces/hs-playground",
   "shutdownAction": "stopCompose",
+  "remoteUser": "jovyan",
+  "updateRemoteUserUID": true,
   "customizations": {
     "vscode": {
       "settings": {
