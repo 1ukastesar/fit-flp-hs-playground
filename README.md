@@ -41,10 +41,14 @@ cd flp-hs-playground
 
 - **VS Code Dev Container**: Once the container is running, you can create and edit files and use the integrated terminal in VS Code (`Ctrl+Shift+;`) to run Haskell's compiler, REPL and Jupyter notebooks.
 
-- **Jupyter Notebook**: In the integrated terminal, print the URL with the access token:
+- **Jupyter Notebook**: Get notebook URL with the access token:
 
 ```bash
+# Dev Containers: integrated terminal
 jupyter notebook list
+
+# Docker Compose: run in current directory
+docker compose exec devcontainer jupyter notebook list
 ```
 
 Open the provided URL in your web browser to access the Jupyter interface.
