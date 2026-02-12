@@ -26,7 +26,7 @@ cd flp-hs-playground
     a. Using Docker Compose (recommended):
 
     ```bash
-    docker-compose up -d
+    docker compose up -d
     ```
 
     b. Using VS Code Dev Containers:
