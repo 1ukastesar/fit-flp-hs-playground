@@ -14,7 +14,6 @@ This repo is built upon a provided Dockerfile from FLP course at Brno University
 
     `curl -fsSL https://get.docker.com | sudo sh`
 
-
 2. **Clone the repository**:
 
 ```bash
@@ -24,32 +23,31 @@ cd flp-hs-playground
 
 3. **Start the development environment**:
 
-    a. Using VS Code Dev Containers (recommended):
+    a. Using Docker Compose (recommended):
+
+    ```bash
+    docker-compose up -d
+    ```
+
+    b. Using VS Code Dev Containers:
 
     - Open the repository folder in VS Code.
     - *(Recommended)* Install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) if you haven't already.
     - When prompted, reopen the folder in the container.
     - If not prompted, you can manually open the Command Palette (`Ctrl+Shift+P`) and select `Dev Containers: Reopen in Container`.
 
-    b. Using Docker Compose:
-
-    ```bash
-    docker-compose up -d
-    ```
-
 ## Accessing the Environment
 
 - **VS Code Dev Container**: Once the container is running, you can create and edit files and use the integrated terminal in VS Code (`Ctrl+Shift+;`) to run Haskell's compiler, REPL and Jupyter notebooks.
 
-- **Jupyter Notebook**: Get notebook URL with the access token:
+- **Jupyter Notebook web interface**: Get notebook URL with the access token:
 
 ```bash
-# Dev Containers: integrated terminal
-jupyter notebook list
-
 # Docker Compose: run in current directory
 docker compose exec devcontainer jupyter notebook list
+
+# Dev Containers: integrated terminal
+jupyter notebook list
 ```
 
 Open the provided URL in your web browser to access the Jupyter interface.
-
