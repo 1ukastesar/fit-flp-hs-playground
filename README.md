@@ -60,3 +60,12 @@ ghci
 ```
 
 Open the provided URL in your web browser to access the Jupyter interface.
+
+## Troubleshooting
+
+- **Write permission denied in the `work` directory**
+
+```bash
+# on the host machine
+sudo chmod -R 777 work
+```
