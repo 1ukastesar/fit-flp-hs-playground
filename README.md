@@ -5,7 +5,7 @@ This repo is built upon a provided Dockerfile from FLP course at Brno University
 ## Setup
 
 1. **Install Docker**:
-    
+
     a. For Windows and macOS, download and install Docker Desktop from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
 
     b. For Linux, follow the instructions for your distribution at [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/).
@@ -48,6 +48,15 @@ docker compose exec devcontainer jupyter notebook list
 
 # Dev Containers: integrated terminal
 jupyter notebook list
+```
+
+- **GHCi**: Run GHCi interactively from the container shell
+```bash
+# Docker Compose: run on host machine
+docker compose exec devcontainer ghci
+
+# Dev Containers: integrated terminal
+ghci
 ```
 
 Open the provided URL in your web browser to access the Jupyter interface.
