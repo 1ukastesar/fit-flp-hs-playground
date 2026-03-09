@@ -50,6 +50,8 @@ docker compose exec devcontainer jupyter notebook list
 jupyter notebook list
 ```
 
+And then open the provided URL in your web browser to access the Jupyter interface.
+
 - **GHCi**: Run GHCi interactively from the container shell
 ```bash
 # Docker Compose: run on host machine
@@ -58,8 +60,6 @@ docker compose exec devcontainer ghci
 # Dev Containers: integrated terminal
 ghci
 ```
-
-Open the provided URL in your web browser to access the Jupyter interface.
 
 ## Troubleshooting
 
