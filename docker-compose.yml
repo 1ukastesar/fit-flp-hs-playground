@@ -3,6 +3,7 @@ services:
     image: 1ukastesar/fit-flp-hs
     ports:
       - 127.0.0.1:8888:8888
+    userns_mode: host
     volumes:
       - .:/workspaces/hs-playground
       - ./work:/home/jovyan/work
