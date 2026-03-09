@@ -65,7 +65,15 @@ Open the provided URL in your web browser to access the Jupyter interface.
 
 - **Write permission denied in the `work` directory**
 
+> [!IMPORTANT]
+> You'll probably need to re-run these commands after adding any files to the `work/` directory from the host.
+> But the f would I know, Docker's bind mounts are just one big permission hell especially in rootless mode.
+
 ```bash
 # on the host machine
 sudo chmod -R 777 work
+
+# or, if you wanna be better
+docker compose exec -u 0 chown -R jovyan:users ~jovyan/work
+# and thanks to `userns: host` in compose file it shouldn't break anything on host
 ```
