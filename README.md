@@ -12,7 +12,9 @@ This repo is built upon a provided Dockerfile from FLP course at Brno University
 
     *(Or)* Use this simple one-liner (beware of security implications):
 
-    `curl -fsSL https://get.docker.com | sudo sh`
+```bash
+curl -fsSL https://get.docker.com | sudo sh
+```
 
 2. **Clone the repository**:
 
