@@ -1,6 +1,6 @@
 services:
   devcontainer:
-    image: 1ukastesar/fit-flp-hs
+    image: docker.io/1ukastesar/fit-flp-hs
     ports:
       - 127.0.0.1:8888:8888
     userns_mode: host
