@@ -8,3 +8,4 @@ services:
     volumes:
       - .:/workspaces/hs-playground:Z
       - ./work:/home/jovyan/work:Z
+      - ./jupyter_server_config.py:/home/jovyan/.jupyter/jupyter_server_config.py:ro,Z

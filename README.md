@@ -23,7 +23,15 @@ git clone https://github.com/1ukastesar/fit-flp-hs-playground.git flp-hs-playgro
 cd flp-hs-playground
 ```
 
-3. **Start the development environment**:
+3. **Set a Jupyter password**:
+
+```bash
+printf "Password: " && read -rs pass && echo && \
+docker run --rm docker.io/1ukastesar/fit-flp-hs python3 -c "from jupyter_server.auth import passwd; print(passwd('$pass'))" | \
+xargs -I{} printf 'c.ServerApp.token = ""\nc.ServerApp.password = "{}"\n' > jupyter_server_config.py
+```
+
+4. **Start the development environment**:
 
     a. Using Docker Compose (recommended):
 
@@ -42,17 +50,7 @@ cd flp-hs-playground
 
 - **VS Code Dev Container**: Once the container is running, you can create and edit files and use the integrated terminal in VS Code (`Ctrl+Shift+;`) to run Haskell's compiler, REPL and Jupyter notebooks.
 
-- **Jupyter Notebook web interface**: Get notebook URL with the access token:
-
-```bash
-# Docker Compose: run in current directory
-docker compose exec devcontainer jupyter notebook list
-
-# Dev Containers: integrated terminal
-jupyter notebook list
-```
-
-And then open the provided URL in your web browser to access the Jupyter interface.
+- **Jupyter Notebook web interface**: Open [http://localhost:8888](http://localhost:8888) in your browser and log in with the password you set in step 3.
 
 - **GHCi**: Run GHCi interactively from the container shell
 ```bash
