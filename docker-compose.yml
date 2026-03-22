@@ -1,6 +1,7 @@
 services:
   devcontainer:
     image: docker.io/1ukastesar/fit-flp-hs
+    container_name: flp-hs-playground
     ports:
       - 127.0.0.1:8888:8888
     userns_mode: host
